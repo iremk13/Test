@@ -81,7 +81,7 @@ namespace RunGroupWebApp.Controllers
             {
                 return View("Error");
             }
-            var clubVm = new CreateClubViewModel
+            var clubVm = new EditClubViewModel
             {
                 Title = club.Title,
                 Description = club.Description,
@@ -92,6 +92,11 @@ namespace RunGroupWebApp.Controllers
 
             };
             return View(clubVm);
+        }
+
+        public async Task<IActionResult> Edit(int id , CreateClubViewModel clubViewModel)
+        {
+            return null;
         }
     }
 }
